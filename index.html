@@ -811,7 +811,7 @@
     <!-- Products Section -->
     <section class="products-section" id="products">
         <h2 class="section-title" id="productsTitle">Colección Destacada</h2>
-        <p class="section-subtitle" id="productsSubtitle">Camisetas premium de las mejores marcas</p>
+        <p class="section-subtitle" id="productsSubtitle">40 camisetas premium de las mejores marcas - 5 diseños por marca</p>
         
         <div class="products-grid" id="productsGrid">
             <!-- Products will be loaded here by JavaScript -->
@@ -871,23 +871,67 @@
 
     <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
         // Sample products data
-        // Productos con imágenes reales del catálogo Yupoo del proveedor
+        // Catálogo completo: 5 productos por marca (40 total)
+        // Imágenes reales del catálogo Yupoo del proveedor
         // Precios calculados con 200% markup sobre costo del proveedor
         const products = [
+            // ========== GUCCI (5 productos) ==========
             {
                 id: 1,
                 brand: "Gucci",
-                name: "GG Logo T-Shirt Classic",
+                name: "GG Logo Classic T-Shirt",
                 price: 55.00,
                 supplierCost: 18.33,
                 image: "https://photo.yupoo.com/luxurysuppliers/bab32dd8/medium.jpeg",
-                badge: "NEW",
+                badge: "POPULAR",
                 categoryId: "3978848"
             },
             {
                 id: 2,
+                brand: "Gucci",
+                name: "Gucci Stripe Cotton Tee",
+                price: 58.00,
+                supplierCost: 19.33,
+                image: "https://photo.yupoo.com/luxurysuppliers/b7f6d93f/medium.jpg",
+                badge: "NEW",
+                categoryId: "3978848"
+            },
+            {
+                id: 3,
+                brand: "Gucci",
+                name: "GG Embroidered T-Shirt",
+                price: 56.00,
+                supplierCost: 18.67,
+                image: "https://photo.yupoo.com/luxurysuppliers/fd6eac1f/medium.jpg",
+                badge: "",
+                categoryId: "3978848"
+            },
+            {
+                id: 4,
+                brand: "Gucci",
+                name: "Gucci Tiger Print Tee",
+                price: 59.00,
+                supplierCost: 19.67,
+                image: "https://photo.yupoo.com/luxurysuppliers/22a1e5a2/medium.jpeg",
+                badge: "TRENDING",
+                categoryId: "3978848"
+            },
+            {
+                id: 5,
+                brand: "Gucci",
+                name: "GG Vintage Logo T-Shirt",
+                price: 57.00,
+                supplierCost: 19.00,
+                image: "https://photo.yupoo.com/luxurysuppliers/5fb3a41a/medium.jpg",
+                badge: "",
+                categoryId: "3978848"
+            },
+
+            // ========== LOUIS VUITTON (5 productos) ==========
+            {
+                id: 6,
                 brand: "Louis Vuitton",
-                name: "LV Monogram Tee",
+                name: "LV Monogram Classic Tee",
                 price: 60.00,
                 supplierCost: 20.00,
                 image: "https://photo.yupoo.com/luxurysuppliers/857bfdfd/medium.jpeg",
@@ -895,63 +939,355 @@
                 categoryId: "2710808"
             },
             {
-                id: 3,
+                id: 7,
+                brand: "Louis Vuitton",
+                name: "LV Logo Print T-Shirt",
+                price: 62.00,
+                supplierCost: 20.67,
+                image: "https://photo.yupoo.com/luxurysuppliers/51c99f2d/medium.jpeg",
+                badge: "NEW",
+                categoryId: "2710808"
+            },
+            {
+                id: 8,
+                brand: "Louis Vuitton",
+                name: "LV Embossed Tee",
+                price: 61.00,
+                supplierCost: 20.33,
+                image: "https://photo.yupoo.com/luxurysuppliers/f1c6341b/medium.jpeg",
+                badge: "",
+                categoryId: "2710808"
+            },
+            {
+                id: 9,
+                brand: "Louis Vuitton",
+                name: "LV All-Over Print T-Shirt",
+                price: 64.00,
+                supplierCost: 21.33,
+                image: "https://photo.yupoo.com/luxurysuppliers/912b3896/medium.jpeg",
+                badge: "LIMITED",
+                categoryId: "2710808"
+            },
+            {
+                id: 10,
+                brand: "Louis Vuitton",
+                name: "LV Classic Monogram Tee",
+                price: 59.00,
+                supplierCost: 19.67,
+                image: "https://photo.yupoo.com/luxurysuppliers/83ce985e/medium.jpeg",
+                badge: "",
+                categoryId: "2710808"
+            },
+
+            // ========== BALENCIAGA (5 productos) ==========
+            {
+                id: 11,
                 brand: "Balenciaga",
-                name: "Logo Print Oversized Shirt",
+                name: "Balenciaga Logo Oversized Tee",
                 price: 52.00,
                 supplierCost: 17.33,
                 image: "https://photo.yupoo.com/luxurysuppliers/b6cfd863/medium.jpeg",
+                badge: "POPULAR",
+                categoryId: "3263590"
+            },
+            {
+                id: 12,
+                brand: "Balenciaga",
+                name: "Balenciaga Signature T-Shirt",
+                price: 54.00,
+                supplierCost: 18.00,
+                image: "https://photo.yupoo.com/luxurysuppliers/a28fbead/medium.jpeg",
+                badge: "NEW",
+                categoryId: "3263590"
+            },
+            {
+                id: 13,
+                brand: "Balenciaga",
+                name: "Balenciaga Print Tee",
+                price: 53.00,
+                supplierCost: 17.67,
+                image: "https://photo.yupoo.com/luxurysuppliers/84a9b0c7/medium.jpeg",
                 badge: "",
                 categoryId: "3263590"
             },
             {
-                id: 4,
+                id: 14,
+                brand: "Balenciaga",
+                name: "Balenciaga Bold Logo T-Shirt",
+                price: 55.00,
+                supplierCost: 18.33,
+                image: "https://photo.yupoo.com/luxurysuppliers/3e0245d9/medium.jpeg",
+                badge: "TRENDING",
+                categoryId: "3263590"
+            },
+            {
+                id: 15,
+                brand: "Balenciaga",
+                name: "Balenciaga Vintage Tee",
+                price: 51.00,
+                supplierCost: 17.00,
+                image: "https://photo.yupoo.com/luxurysuppliers/87482cf6/medium.jpeg",
+                badge: "",
+                categoryId: "3263590"
+            },
+
+            // ========== FENDI (5 productos) ==========
+            {
+                id: 16,
                 brand: "Fendi",
-                name: "FF Logo T-Shirt",
+                name: "FF Logo Classic T-Shirt",
                 price: 57.00,
                 supplierCost: 19.00,
                 image: "https://photo.yupoo.com/luxurysuppliers/2d2a33b1/medium.jpeg",
+                badge: "POPULAR",
+                categoryId: "485548"
+            },
+            {
+                id: 17,
+                brand: "Fendi",
+                name: "Fendi Monogram Tee",
+                price: 59.00,
+                supplierCost: 19.67,
+                image: "https://photo.yupoo.com/luxurysuppliers/f3a26aa2/medium.jpeg",
+                badge: "NEW",
+                categoryId: "485548"
+            },
+            {
+                id: 18,
+                brand: "Fendi",
+                name: "Fendi Print T-Shirt",
+                price: 56.00,
+                supplierCost: 18.67,
+                image: "https://photo.yupoo.com/luxurysuppliers/e692e611/medium.jpeg",
                 badge: "",
                 categoryId: "485548"
             },
             {
-                id: 5,
+                id: 19,
+                brand: "Fendi",
+                name: "Fendi Logo Pattern Tee",
+                price: 58.00,
+                supplierCost: 19.33,
+                image: "https://photo.yupoo.com/luxurysuppliers/dfea947f/medium.jpeg",
+                badge: "LIMITED",
+                categoryId: "485548"
+            },
+            {
+                id: 20,
+                brand: "Fendi",
+                name: "Fendi Classic FF T-Shirt",
+                price: 55.00,
+                supplierCost: 18.33,
+                image: "https://photo.yupoo.com/luxurysuppliers/6fbc6293/medium.jpeg",
+                badge: "",
+                categoryId: "485548"
+            },
+
+            // ========== VERSACE (5 productos) ==========
+            {
+                id: 21,
                 brand: "Versace",
-                name: "Medusa Head Tee",
+                name: "Medusa Head Classic Tee",
                 price: 62.00,
                 supplierCost: 20.67,
                 image: "https://photo.yupoo.com/luxurysuppliers/3fe0b416/medium.jpg",
+                badge: "POPULAR",
+                categoryId: "864863"
+            },
+            {
+                id: 22,
+                brand: "Versace",
+                name: "Versace Baroque Print T-Shirt",
+                price: 64.00,
+                supplierCost: 21.33,
+                image: "https://photo.yupoo.com/luxurysuppliers/a935efef/medium.jpeg",
                 badge: "NEW",
                 categoryId: "864863"
             },
             {
-                id: 6,
+                id: 23,
+                brand: "Versace",
+                name: "Versace Logo Tee",
+                price: 61.00,
+                supplierCost: 20.33,
+                image: "https://photo.yupoo.com/luxurysuppliers/5858a8c0/medium.jpeg",
+                badge: "",
+                categoryId: "864863"
+            },
+            {
+                id: 24,
+                brand: "Versace",
+                name: "Versace Gold Medusa T-Shirt",
+                price: 65.00,
+                supplierCost: 21.67,
+                image: "https://photo.yupoo.com/luxurysuppliers/97ee06e9/medium.jpeg",
+                badge: "TRENDING",
+                categoryId: "864863"
+            },
+            {
+                id: 25,
+                brand: "Versace",
+                name: "Versace Classic Logo Tee",
+                price: 60.00,
+                supplierCost: 20.00,
+                image: "https://photo.yupoo.com/luxurysuppliers/e47cdcf1/medium.jpeg",
+                badge: "",
+                categoryId: "864863"
+            },
+
+            // ========== OFF-WHITE (5 productos) ==========
+            {
+                id: 26,
                 brand: "Off-White",
-                name: "Arrow Logo Shirt",
+                name: "Off-White Arrow Logo Tee",
                 price: 54.00,
                 supplierCost: 18.00,
                 image: "https://photo.yupoo.com/luxurysuppliers/8a0ebb12/medium.jpeg",
+                badge: "POPULAR",
+                categoryId: "2729629"
+            },
+            {
+                id: 27,
+                brand: "Off-White",
+                name: "Off-White Diagonal T-Shirt",
+                price: 56.00,
+                supplierCost: 18.67,
+                image: "https://photo.yupoo.com/luxurysuppliers/b55434c5/medium.jpeg",
+                badge: "NEW",
+                categoryId: "2729629"
+            },
+            {
+                id: 28,
+                brand: "Off-White",
+                name: "Off-White Graffiti Tee",
+                price: 55.00,
+                supplierCost: 18.33,
+                image: "https://photo.yupoo.com/luxurysuppliers/02a4ef90/medium.jpeg",
+                badge: "",
+                categoryId: "2729629"
+            },
+            {
+                id: 29,
+                brand: "Off-White",
+                name: "Off-White Caravaggio T-Shirt",
+                price: 58.00,
+                supplierCost: 19.33,
+                image: "https://photo.yupoo.com/luxurysuppliers/38c96a8d/medium.jpeg",
                 badge: "TRENDING",
                 categoryId: "2729629"
             },
             {
-                id: 7,
+                id: 30,
+                brand: "Off-White",
+                name: "Off-White Logo Print Tee",
+                price: 53.00,
+                supplierCost: 17.67,
+                image: "https://photo.yupoo.com/luxurysuppliers/109351ae/medium.jpeg",
+                badge: "",
+                categoryId: "2729629"
+            },
+
+            // ========== MONCLER (5 productos) ==========
+            {
+                id: 31,
                 brand: "Moncler",
-                name: "Logo Patch T-Shirt",
+                name: "Moncler Logo Patch T-Shirt",
                 price: 58.00,
                 supplierCost: 19.33,
                 image: "https://photo.yupoo.com/luxurysuppliers/6d7ad939/medium.jpeg",
+                badge: "POPULAR",
+                categoryId: "829172"
+            },
+            {
+                id: 32,
+                brand: "Moncler",
+                name: "Moncler Classic Logo Tee",
+                price: 60.00,
+                supplierCost: 20.00,
+                image: "https://photo.yupoo.com/luxurysuppliers/6e18c5e0/medium.jpeg",
+                badge: "NEW",
+                categoryId: "829172"
+            },
+            {
+                id: 33,
+                brand: "Moncler",
+                name: "Moncler Embroidered T-Shirt",
+                price: 59.00,
+                supplierCost: 19.67,
+                image: "https://photo.yupoo.com/luxurysuppliers/94d75862/medium.jpeg",
                 badge: "",
                 categoryId: "829172"
             },
             {
-                id: 8,
+                id: 34,
+                brand: "Moncler",
+                name: "Moncler Signature Tee",
+                price: 61.00,
+                supplierCost: 20.33,
+                image: "https://photo.yupoo.com/luxurysuppliers/761760c4/medium.jpeg",
+                badge: "LIMITED",
+                categoryId: "829172"
+            },
+            {
+                id: 35,
+                brand: "Moncler",
+                name: "Moncler Sport T-Shirt",
+                price: 57.00,
+                supplierCost: 19.00,
+                image: "https://photo.yupoo.com/luxurysuppliers/702533aa/medium.jpeg",
+                badge: "",
+                categoryId: "829172"
+            },
+
+            // ========== VALENTINO (5 productos) ==========
+            {
+                id: 36,
                 brand: "Valentino",
-                name: "VLTN Print Tee",
+                name: "VLTN Print Classic Tee",
                 price: 59.00,
                 supplierCost: 19.67,
                 image: "https://photo.yupoo.com/luxurysuppliers/4aea3c43/medium.jpg",
-                badge: "LIMITED",
+                badge: "POPULAR",
+                categoryId: "455424"
+            },
+            {
+                id: 37,
+                brand: "Valentino",
+                name: "Valentino Logo T-Shirt",
+                price: 61.00,
+                supplierCost: 20.33,
+                image: "https://photo.yupoo.com/luxurysuppliers/476ab26e/medium.jpg",
+                badge: "NEW",
+                categoryId: "455424"
+            },
+            {
+                id: 38,
+                brand: "Valentino",
+                name: "Valentino Signature Tee",
+                price: 58.00,
+                supplierCost: 19.33,
+                image: "https://photo.yupoo.com/luxurysuppliers/d3b3e5e4/medium.jpg",
+                badge: "",
+                categoryId: "455424"
+            },
+            {
+                id: 39,
+                brand: "Valentino",
+                name: "VLTN Bold Print T-Shirt",
+                price: 62.00,
+                supplierCost: 20.67,
+                image: "https://photo.yupoo.com/luxurysuppliers/4b21a8dd/medium.jpg",
+                badge: "TRENDING",
+                categoryId: "455424"
+            },
+            {
+                id: 40,
+                brand: "Valentino",
+                name: "Valentino Classic Logo Tee",
+                price: 57.00,
+                supplierCost: 19.00,
+                image: "https://photo.yupoo.com/luxurysuppliers/f7a4e7b2/medium.jpg",
+                badge: "",
                 categoryId: "455424"
             }
         ];
@@ -1119,7 +1455,7 @@
                     brandsTitle: 'Nuestras Marcas',
                     brandsSubtitle: 'Las marcas más prestigiosas del mundo',
                     productsTitle: 'Colección Destacada',
-                    productsSubtitle: 'Camisetas premium de las mejores marcas',
+                    productsSubtitle: '40 camisetas premium de las mejores marcas - 5 diseños por marca',
                     footerDesc: 'Tu destino para réplicas de alta calidad de las marcas de lujo más prestigiosas del mundo.',
                     footerShop: 'Comprar',
                     footerInfo: 'Información',
@@ -1137,7 +1473,7 @@
                     brandsTitle: 'Our Brands',
                     brandsSubtitle: 'The world\'s most prestigious brands',
                     productsTitle: 'Featured Collection',
-                    productsSubtitle: 'Premium t-shirts from the best brands',
+                    productsSubtitle: '40 premium t-shirts from top brands - 5 designs per brand',
                     footerDesc: 'Your destination for high-quality replicas of the world\'s most prestigious luxury brands.',
                     footerShop: 'Shop',
                     footerInfo: 'Information',
