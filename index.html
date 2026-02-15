@@ -857,7 +857,7 @@
             <div class="footer-section">
                 <h3 id="footerContact">Contacto</h3>
                 <ul>
-                    <li><a href="#">Email: info@luxurysocietysv.com</a></li>
+                    <li><a href="#">Email: <span class="__cf_email__" data-cfemail="127b7c747d527e676a67606b617d717b77666b61643c717d7f">[email&#160;protected]</span></a></li>
                     <li><a href="#">WhatsApp: +503 1234 5678</a></li>
                     <li><a href="#" data-en="El Salvador" data-es="El Salvador">El Salvador</a></li>
                 </ul>
@@ -869,72 +869,90 @@
         </div>
     </footer>
 
-    <script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
         // Sample products data
+        // Productos con imágenes reales del catálogo Yupoo del proveedor
+        // Precios calculados con 200% markup sobre costo del proveedor
         const products = [
             {
                 id: 1,
                 brand: "Gucci",
-                name: "GG Logo T-Shirt",
-                price: 45.00,
-                image: "https://via.placeholder.com/400x400/F5F5F0/D4AF37?text=GUCCI",
-                badge: "NEW"
+                name: "GG Logo T-Shirt Classic",
+                price: 55.00,
+                supplierCost: 18.33,
+                image: "https://photo.yupoo.com/luxurysuppliers/bab32dd8/medium.jpeg",
+                badge: "NEW",
+                categoryId: "3978848"
             },
             {
                 id: 2,
                 brand: "Louis Vuitton",
-                name: "Monogram Tee",
-                price: 48.00,
-                image: "https://via.placeholder.com/400x400/F5F5F0/8B4513?text=LOUIS+VUITTON",
-                badge: "POPULAR"
+                name: "LV Monogram Tee",
+                price: 60.00,
+                supplierCost: 20.00,
+                image: "https://photo.yupoo.com/luxurysuppliers/857bfdfd/medium.jpeg",
+                badge: "POPULAR",
+                categoryId: "2710808"
             },
             {
                 id: 3,
                 brand: "Balenciaga",
-                name: "Logo Print Shirt",
-                price: 42.00,
-                image: "https://via.placeholder.com/400x400/F5F5F0/000000?text=BALENCIAGA",
-                badge: ""
+                name: "Logo Print Oversized Shirt",
+                price: 52.00,
+                supplierCost: 17.33,
+                image: "https://photo.yupoo.com/luxurysuppliers/b6cfd863/medium.jpeg",
+                badge: "",
+                categoryId: "3263590"
             },
             {
                 id: 4,
                 brand: "Fendi",
                 name: "FF Logo T-Shirt",
-                price: 46.00,
-                image: "https://via.placeholder.com/400x400/F5F5F0/8B6914?text=FENDI",
-                badge: ""
+                price: 57.00,
+                supplierCost: 19.00,
+                image: "https://photo.yupoo.com/luxurysuppliers/2d2a33b1/medium.jpeg",
+                badge: "",
+                categoryId: "485548"
             },
             {
                 id: 5,
                 brand: "Versace",
                 name: "Medusa Head Tee",
-                price: 50.00,
-                image: "https://via.placeholder.com/400x400/F5F5F0/FFD700?text=VERSACE",
-                badge: "NEW"
+                price: 62.00,
+                supplierCost: 20.67,
+                image: "https://photo.yupoo.com/luxurysuppliers/3fe0b416/medium.jpg",
+                badge: "NEW",
+                categoryId: "864863"
             },
             {
                 id: 6,
                 brand: "Off-White",
                 name: "Arrow Logo Shirt",
-                price: 44.00,
-                image: "https://via.placeholder.com/400x400/F5F5F0/333333?text=OFF-WHITE",
-                badge: "TRENDING"
+                price: 54.00,
+                supplierCost: 18.00,
+                image: "https://photo.yupoo.com/luxurysuppliers/8a0ebb12/medium.jpeg",
+                badge: "TRENDING",
+                categoryId: "2729629"
             },
             {
                 id: 7,
                 brand: "Moncler",
                 name: "Logo Patch T-Shirt",
-                price: 47.00,
-                image: "https://via.placeholder.com/400x400/F5F5F0/003366?text=MONCLER",
-                badge: ""
+                price: 58.00,
+                supplierCost: 19.33,
+                image: "https://photo.yupoo.com/luxurysuppliers/6d7ad939/medium.jpeg",
+                badge: "",
+                categoryId: "829172"
             },
             {
                 id: 8,
                 brand: "Valentino",
                 name: "VLTN Print Tee",
-                price: 49.00,
-                image: "https://via.placeholder.com/400x400/F5F5F0/8B0000?text=VALENTINO",
-                badge: "LIMITED"
+                price: 59.00,
+                supplierCost: 19.67,
+                image: "https://photo.yupoo.com/luxurysuppliers/4aea3c43/medium.jpg",
+                badge: "LIMITED",
+                categoryId: "455424"
             }
         ];
 
@@ -1182,14 +1200,4 @@
             if (window.scrollY > 100) {
                 header.classList.add('scrolled');
             } else {
-                header.classList.remove('scrolled');
-            }
-        });
-
-        // Initialize
-        document.addEventListener('DOMContentLoaded', () => {
-            loadProducts();
-        });
-    </script>
-</body>
-</html>
+                header.class
