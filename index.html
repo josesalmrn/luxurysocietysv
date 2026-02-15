@@ -872,6 +872,426 @@
     <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
         // Sample products data
         // Catálogo completo: 5 productos por marca (40 total)
+        // NOTA: Las imágenes usan placeholders temporales porque Yupoo bloquea acceso directo
+        // Ver DESCARGAR-IMAGENES.md para obtener imágenes reales del proveedor
+        // Precios calculados con 200% markup sobre costo del proveedor
+        const products = [
+            // ========== GUCCI (5 productos) ==========
+            {
+                id: 1,
+                brand: "Gucci",
+                name: "GG Logo Classic T-Shirt",
+                price: 55.00,
+                supplierCost: 18.33,
+                image: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&h=400&fit=crop",
+                badge: "POPULAR",
+                categoryId: "3978848"
+            },
+            {
+                id: 2,
+                brand: "Gucci",
+                name: "Gucci Stripe Cotton Tee",
+                price: 58.00,
+                supplierCost: 19.33,
+                image: "https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=400&h=400&fit=crop",
+                badge: "NEW",
+                categoryId: "3978848"
+            },
+            {
+                id: 3,
+                brand: "Gucci",
+                name: "GG Embroidered T-Shirt",
+                price: 56.00,
+                supplierCost: 18.67,
+                image: "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=400&h=400&fit=crop",
+                badge: "",
+                categoryId: "3978848"
+            },
+            {
+                id: 4,
+                brand: "Gucci",
+                name: "Gucci Tiger Print Tee",
+                price: 59.00,
+                supplierCost: 19.67,
+                image: "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=400&h=400&fit=crop",
+                badge: "TRENDING",
+                categoryId: "3978848"
+            },
+            {
+                id: 5,
+                brand: "Gucci",
+                name: "GG Vintage Logo T-Shirt",
+                price: 57.00,
+                supplierCost: 19.00,
+                image: "https://images.unsplash.com/photo-1620799140188-3b2a7ebe3e2c?w=400&h=400&fit=crop",
+                badge: "",
+                categoryId: "3978848"
+            },
+
+            // ========== LOUIS VUITTON (5 productos) ==========
+            {
+                id: 6,
+                brand: "Louis Vuitton",
+                name: "LV Monogram Classic Tee",
+                price: 60.00,
+                supplierCost: 20.00,
+                image: "https://images.unsplash.com/photo-1622445275463-afa2ab738c34?w=400&h=400&fit=crop",
+                badge: "POPULAR",
+                categoryId: "2710808"
+            },
+            {
+                id: 7,
+                brand: "Louis Vuitton",
+                name: "LV Logo Print T-Shirt",
+                price: 62.00,
+                supplierCost: 20.67,
+                image: "https://images.unsplash.com/photo-1562157873-818bc0726f68?w=400&h=400&fit=crop",
+                badge: "NEW",
+                categoryId: "2710808"
+            },
+            {
+                id: 8,
+                brand: "Louis Vuitton",
+                name: "LV Embossed Tee",
+                price: 61.00,
+                supplierCost: 20.33,
+                image: "https://images.unsplash.com/photo-1582552938357-32b906a10e70?w=400&h=400&fit=crop",
+                badge: "",
+                categoryId: "2710808"
+            },
+            {
+                id: 9,
+                brand: "Louis Vuitton",
+                name: "LV All-Over Print T-Shirt",
+                price: 64.00,
+                supplierCost: 21.33,
+                image: "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=400&h=400&fit=crop",
+                badge: "LIMITED",
+                categoryId: "2710808"
+            },
+            {
+                id: 10,
+                brand: "Louis Vuitton",
+                name: "LV Classic Monogram Tee",
+                price: 59.00,
+                supplierCost: 19.67,
+                image: "https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=400&h=400&fit=crop",
+                badge: "",
+                categoryId: "2710808"
+            },
+
+            // ========== BALENCIAGA (5 productos) ==========
+            {
+                id: 11,
+                brand: "Balenciaga",
+                name: "Balenciaga Logo Oversized Tee",
+                price: 52.00,
+                supplierCost: 17.33,
+                image: "https://images.unsplash.com/photo-1529374255404-311a2a4f1fd9?w=400&h=400&fit=crop",
+                badge: "POPULAR",
+                categoryId: "3263590"
+            },
+            {
+                id: 12,
+                brand: "Balenciaga",
+                name: "Balenciaga Signature T-Shirt",
+                price: 54.00,
+                supplierCost: 18.00,
+                image: "https://images.unsplash.com/photo-1581655353564-df123a1eb820?w=400&h=400&fit=crop",
+                badge: "NEW",
+                categoryId: "3263590"
+            },
+            {
+                id: 13,
+                brand: "Balenciaga",
+                name: "Balenciaga Print Tee",
+                price: 53.00,
+                supplierCost: 17.67,
+                image: "https://images.unsplash.com/photo-1618517351616-38fb9c5210c6?w=400&h=400&fit=crop",
+                badge: "",
+                categoryId: "3263590"
+            },
+            {
+                id: 14,
+                brand: "Balenciaga",
+                name: "Balenciaga Bold Logo T-Shirt",
+                price: 55.00,
+                supplierCost: 18.33,
+                image: "https://images.unsplash.com/photo-1627225924765-552d49cf47ad?w=400&h=400&fit=crop",
+                badge: "TRENDING",
+                categoryId: "3263590"
+            },
+            {
+                id: 15,
+                brand: "Balenciaga",
+                name: "Balenciaga Vintage Tee",
+                price: 51.00,
+                supplierCost: 17.00,
+                image: "https://images.unsplash.com/photo-1598032895397-b9a0c3ab8ee1?w=400&h=400&fit=crop",
+                badge: "",
+                categoryId: "3263590"
+            },
+
+            // ========== FENDI (5 productos) ==========
+            {
+                id: 16,
+                brand: "Fendi",
+                name: "FF Logo Classic T-Shirt",
+                price: 57.00,
+                supplierCost: 19.00,
+                image: "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=400&h=400&fit=crop",
+                badge: "POPULAR",
+                categoryId: "485548"
+            },
+            {
+                id: 17,
+                brand: "Fendi",
+                name: "Fendi Monogram Tee",
+                price: 59.00,
+                supplierCost: 19.67,
+                image: "https://images.unsplash.com/photo-1523381210434-271e8be1f52b?w=400&h=400&fit=crop",
+                badge: "NEW",
+                categoryId: "485548"
+            },
+            {
+                id: 18,
+                brand: "Fendi",
+                name: "Fendi Print T-Shirt",
+                price: 56.00,
+                supplierCost: 18.67,
+                image: "https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=400&h=400&fit=crop",
+                badge: "",
+                categoryId: "485548"
+            },
+            {
+                id: 19,
+                brand: "Fendi",
+                name: "Fendi Logo Pattern Tee",
+                price: 58.00,
+                supplierCost: 19.33,
+                image: "https://images.unsplash.com/photo-1562157873-818bc0726f68?w=400&h=400&fit=crop",
+                badge: "LIMITED",
+                categoryId: "485548"
+            },
+            {
+                id: 20,
+                brand: "Fendi",
+                name: "Fendi Classic FF T-Shirt",
+                price: 55.00,
+                supplierCost: 18.33,
+                image: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&h=400&fit=crop",
+                badge: "",
+                categoryId: "485548"
+            },
+
+            // ========== VERSACE (5 productos) ==========
+            {
+                id: 21,
+                brand: "Versace",
+                name: "Medusa Head Classic Tee",
+                price: 62.00,
+                supplierCost: 20.67,
+                image: "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=400&h=400&fit=crop",
+                badge: "POPULAR",
+                categoryId: "864863"
+            },
+            {
+                id: 22,
+                brand: "Versace",
+                name: "Versace Baroque Print T-Shirt",
+                price: 64.00,
+                supplierCost: 21.33,
+                image: "https://images.unsplash.com/photo-1620799140188-3b2a7ebe3e2c?w=400&h=400&fit=crop",
+                badge: "NEW",
+                categoryId: "864863"
+            },
+            {
+                id: 23,
+                brand: "Versace",
+                name: "Versace Logo Tee",
+                price: 61.00,
+                supplierCost: 20.33,
+                image: "https://images.unsplash.com/photo-1622445275463-afa2ab738c34?w=400&h=400&fit=crop",
+                badge: "",
+                categoryId: "864863"
+            },
+            {
+                id: 24,
+                brand: "Versace",
+                name: "Versace Gold Medusa T-Shirt",
+                price: 65.00,
+                supplierCost: 21.67,
+                image: "https://images.unsplash.com/photo-1529374255404-311a2a4f1fd9?w=400&h=400&fit=crop",
+                badge: "TRENDING",
+                categoryId: "864863"
+            },
+            {
+                id: 25,
+                brand: "Versace",
+                name: "Versace Classic Logo Tee",
+                price: 60.00,
+                supplierCost: 20.00,
+                image: "https://images.unsplash.com/photo-1581655353564-df123a1eb820?w=400&h=400&fit=crop",
+                badge: "",
+                categoryId: "864863"
+            },
+
+            // ========== OFF-WHITE (5 productos) ==========
+            {
+                id: 26,
+                brand: "Off-White",
+                name: "Off-White Arrow Logo Tee",
+                price: 54.00,
+                supplierCost: 18.00,
+                image: "https://images.unsplash.com/photo-1618517351616-38fb9c5210c6?w=400&h=400&fit=crop",
+                badge: "POPULAR",
+                categoryId: "2729629"
+            },
+            {
+                id: 27,
+                brand: "Off-White",
+                name: "Off-White Diagonal T-Shirt",
+                price: 56.00,
+                supplierCost: 18.67,
+                image: "https://images.unsplash.com/photo-1627225924765-552d49cf47ad?w=400&h=400&fit=crop",
+                badge: "NEW",
+                categoryId: "2729629"
+            },
+            {
+                id: 28,
+                brand: "Off-White",
+                name: "Off-White Graffiti Tee",
+                price: 55.00,
+                supplierCost: 18.33,
+                image: "https://images.unsplash.com/photo-1598032895397-b9a0c3ab8ee1?w=400&h=400&fit=crop",
+                badge: "",
+                categoryId: "2729629"
+            },
+            {
+                id: 29,
+                brand: "Off-White",
+                name: "Off-White Caravaggio T-Shirt",
+                price: 58.00,
+                supplierCost: 19.33,
+                image: "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=400&h=400&fit=crop",
+                badge: "TRENDING",
+                categoryId: "2729629"
+            },
+            {
+                id: 30,
+                brand: "Off-White",
+                name: "Off-White Logo Print Tee",
+                price: 53.00,
+                supplierCost: 17.67,
+                image: "https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=400&h=400&fit=crop",
+                badge: "",
+                categoryId: "2729629"
+            },
+
+            // ========== MONCLER (5 productos) ==========
+            {
+                id: 31,
+                brand: "Moncler",
+                name: "Moncler Logo Patch T-Shirt",
+                price: 58.00,
+                supplierCost: 19.33,
+                image: "https://images.unsplash.com/photo-1582552938357-32b906a10e70?w=400&h=400&fit=crop",
+                badge: "POPULAR",
+                categoryId: "829172"
+            },
+            {
+                id: 32,
+                brand: "Moncler",
+                name: "Moncler Classic Logo Tee",
+                price: 60.00,
+                supplierCost: 20.00,
+                image: "https://images.unsplash.com/photo-1523381210434-271e8be1f52b?w=400&h=400&fit=crop",
+                badge: "NEW",
+                categoryId: "829172"
+            },
+            {
+                id: 33,
+                brand: "Moncler",
+                name: "Moncler Embroidered T-Shirt",
+                price: 59.00,
+                supplierCost: 19.67,
+                image: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&h=400&fit=crop",
+                badge: "",
+                categoryId: "829172"
+            },
+            {
+                id: 34,
+                brand: "Moncler",
+                name: "Moncler Signature Tee",
+                price: 61.00,
+                supplierCost: 20.33,
+                image: "https://images.unsplash.com/photo-1618354691373-d851c5c3a990?w=400&h=400&fit=crop",
+                badge: "LIMITED",
+                categoryId: "829172"
+            },
+            {
+                id: 35,
+                brand: "Moncler",
+                name: "Moncler Sport T-Shirt",
+                price: 57.00,
+                supplierCost: 19.00,
+                image: "https://images.unsplash.com/photo-1620799140188-3b2a7ebe3e2c?w=400&h=400&fit=crop",
+                badge: "",
+                categoryId: "829172"
+            },
+
+            // ========== VALENTINO (5 productos) ==========
+            {
+                id: 36,
+                brand: "Valentino",
+                name: "VLTN Print Classic Tee",
+                price: 59.00,
+                supplierCost: 19.67,
+                image: "https://images.unsplash.com/photo-1622445275463-afa2ab738c34?w=400&h=400&fit=crop",
+                badge: "POPULAR",
+                categoryId: "455424"
+            },
+            {
+                id: 37,
+                brand: "Valentino",
+                name: "Valentino Logo T-Shirt",
+                price: 61.00,
+                supplierCost: 20.33,
+                image: "https://images.unsplash.com/photo-1529374255404-311a2a4f1fd9?w=400&h=400&fit=crop",
+                badge: "NEW",
+                categoryId: "455424"
+            },
+            {
+                id: 38,
+                brand: "Valentino",
+                name: "Valentino Signature Tee",
+                price: 58.00,
+                supplierCost: 19.33,
+                image: "https://images.unsplash.com/photo-1581655353564-df123a1eb820?w=400&h=400&fit=crop",
+                badge: "",
+                categoryId: "455424"
+            },
+            {
+                id: 39,
+                brand: "Valentino",
+                name: "VLTN Bold Print T-Shirt",
+                price: 62.00,
+                supplierCost: 20.67,
+                image: "https://images.unsplash.com/photo-1618517351616-38fb9c5210c6?w=400&h=400&fit=crop",
+                badge: "TRENDING",
+                categoryId: "455424"
+            },
+            {
+                id: 40,
+                brand: "Valentino",
+                name: "Valentino Classic Logo Tee",
+                price: 57.00,
+                supplierCost: 19.00,
+                image: "https://images.unsplash.com/photo-1627225924765-552d49cf47ad?w=400&h=400&fit=crop",
+                badge: "",
+                categoryId: "455424"
+            }
+        ];
         // Imágenes reales del catálogo Yupoo del proveedor
         // Precios calculados con 200% markup sobre costo del proveedor
         const products = [
